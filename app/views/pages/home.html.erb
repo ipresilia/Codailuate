@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <div class="container">
 <h1>All Batches</h1>
 
@@ -88,3 +89,14 @@
       </div>
     </div>
   </div>
+
+<%else %>
+  <div style="text-align: center;">
+
+  <h3>Welcome to Codailuate, Codaisseur's student evaluation system</h3>
+  <br>
+
+  <h5>Please <%= link_to "Sign In", new_user_session_path%> to view the content</h5>
+  </div>
+
+<% end %>
