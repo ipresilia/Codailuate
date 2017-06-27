@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Batch.destroy_all
+Student.destroy_all
+# Color.destroy_all
+
+test_user = User.create(email: "test@test.com", password: "abc123")
+
+student = Student.create(full_name: "test_student1", picture: "http://res.cloudinary.com/dmj1w2it5/image/upload/v1496051293/sample.jpg", last_evaluation: "red")
+
+test_batch = Batch.create(name: "Batch 101", start_to_end: "June 27th to June 27th 2017" )
